@@ -71,6 +71,7 @@
     </template>
     
     <script lang="ts">
+
     export default {
       name: 'Splash',
       data() {
@@ -79,11 +80,12 @@
         };
       },
       methods: {
-        changeImage(newUrl) {
+        changeImage(newUrl: string) {
           this.imgUrl = newUrl;
         },
       },
     };
+    
     </script>
     
     <style>
