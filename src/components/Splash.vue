@@ -155,7 +155,7 @@
       flex-direction: column;
       justify-content: center;
       width: 70%;
-      height:
+      height: 100%;
     }
     </style>
     
