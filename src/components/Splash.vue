@@ -10,25 +10,25 @@
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('src/assets/splash/heist.png')">
+                <a href="#" @click="changeImage('../assets/splash/heist.png')">
                   <img class="desktop_icon" src="../assets/icon_contact.png" alt="">
                   <p>Contact</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a a href="#" @click="changeImage('src/assets/splash/window_organization.png')">
+                <a a href="#" @click="changeImage('../assets/splash/window_organization.png')">
                   <img class="desktop_icon" src="../assets/icon_organization.png" alt="">
                   <p>Organization</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('src/assets/splash/window_archive.png')">
+                <a href="#" @click="changeImage('.../assets/splash/window_archive.png')">
                   <img class="desktop_icon" src="../assets/icon_archive.png" alt="">
                   <p>Archive</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('src/assets/splash/window_about.png')">
+                <a href="#" @click="changeImage('../assets/splash/window_about.png')">
                   <img class="desktop_icon" src="../assets/icon_about.png" alt="">
                   <p>About</p>
                 </a>
@@ -79,11 +79,11 @@
           imgUrl: 'src/assets/splash/heist.png',
         };
       },
-      methods: {
-        changeImage(newUrl: string) {
-          this.imgUrl = newUrl;
-        },
-      },
+   methods: {
+    changeImage(newUrl: string): void {
+      this.imgUrl = newUrl;
+    },
+  },
     };
     
     </script>
