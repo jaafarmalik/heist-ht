@@ -73,19 +73,19 @@
     <script lang="ts">
 
     export default {
-      name: 'Splash',
-      data() {
-        return {
-          imgUrl: 'src/assets/splash/heist.png',
-        };
+          name: 'Splash',
+          data() {
+            return {
+              imgUrl: './splash/heist.png',
+            };
+          },
+      methods: {
+        changeImage(newUrl: string): void {
+          this.imgUrl = newUrl;
+        },
       },
-   methods: {
-    changeImage(newUrl: string): void {
-      this.imgUrl = newUrl;
-    },
-  },
     };
-    
+        
     </script>
     
     <style>
