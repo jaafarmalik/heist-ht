@@ -5,31 +5,31 @@
             <div class="links-top">
               <div class="link-icon">
                 <a href="https://www.heist.ht">
-                  <img class="desktop_icon" src="../assets/icon_home.png" alt="">
+                  <img class="desktop_icon" src="/icon/icon_home.png" alt="">
                   <p>Home</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('../assets/splash/heist.png')">
-                  <img class="desktop_icon" src="../assets/icon_contact.png" alt="">
+                <a href="#" @click="changeImage('./splash/heist.png')">
+                  <img class="desktop_icon" src="/icon/icon_contact.png" alt="">
                   <p>Contact</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a a href="#" @click="changeImage('../assets/splash/window_organization.png')">
-                  <img class="desktop_icon" src="../assets/icon_organization.png" alt="">
+                <a a href="#" @click="changeImage('./splash/window_organization.png')">
+                  <img class="desktop_icon" src="/icon/icon_organization.png" alt="">
                   <p>Organization</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('.../assets/splash/window_archive.png')">
-                  <img class="desktop_icon" src="../assets/icon_archive.png" alt="">
+                <a href="#" @click="changeImage('./splash/window_archive.png')">
+                  <img class="desktop_icon" src="/icon/icon_archive.png" alt="">
                   <p>Archive</p>
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('../assets/splash/window_about.png')">
-                  <img class="desktop_icon" src="../assets/icon_about.png" alt="">
+                <a href="#" @click="changeImage('./splash/window_about.png')">
+                  <img class="desktop_icon" src="/icon/icon_about.png" alt="">
                   <p>About</p>
                 </a>
               </div>
@@ -42,25 +42,25 @@
             <div class="links-bottom">
               <div class="link-icon">
                 <a target="_blank" href="https://discord.gg/JR2mcktyCd">
-                  <img class="desktop_icon" src="../assets/icon_discord.png" alt="">
+                  <img class="desktop_icon" src="/icon/icon_discord.png" alt="">
                   <p>Discord</p>
                 </a>
               </div>
               <div class="link-icon">
                 <a target="_blank" href="https://www.twitter.com/heistht">
-                  <img class="desktop_icon" src="../assets/icon_twitter.png" alt="">
+                  <img class="desktop_icon" src="/icon/icon_twitter.png" alt="">
                   <p>Twitter</p>
                 </a>
               </div>
               <div class="link-icon">
                 <a target="_blank" href="https://www.instagram.com/heist">
-                  <img class="desktop_icon" src="../assets/icon_instagram.png" alt="">
+                  <img class="desktop_icon" src="/icon/icon_instagram.png" alt="">
                   <p>Instagram</p>
                 </a>
               </div>
               <div class="link-icon">
                 <a target="_blank" href="https://www.heist.net/">
-                  <img class="desktop_icon" src="../assets/icon_shop.png" alt="">
+                  <img class="desktop_icon" src="/icon/icon_shop.png" alt="">
                   <p>Shop</p>
                 </a>
               </div>
