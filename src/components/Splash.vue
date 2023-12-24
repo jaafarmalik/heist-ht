@@ -10,7 +10,7 @@
                 </a>
               </div>
               <div class="link-icon">
-                <a href="#" @click="changeImage('./splash/heist.png')">
+                <a href="#" @click="changeImage('./splash/window_contact.png')">
                   <img class="desktop_icon" src="/icon/icon_contact.png" alt="">
                   <p>Contact</p>
                 </a>
