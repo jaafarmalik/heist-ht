@@ -16,7 +16,7 @@
                 </a>
               </div>
               <div class="link-icon">
-                <a a href="#" @click="changeImage('./splash/window_organization.png')">
+                <a a href="#" @click="changeImage('./splash/window_organization_noexp.png')">
                   <img class="desktop_icon" src="/icon/icon_organization.png" alt="">
                   <p>Organization</p>
                 </a>
@@ -76,7 +76,7 @@
           name: 'Splash',
           data() {
             return {
-              imgUrl: './splash/heist.png',
+              imgUrl: './splash/window_heist.png',
             };
           },
       methods: {
@@ -114,13 +114,6 @@
       padding: 1.2em;
     }
     
-    .img-section {
-      display: flex;
-      width: 90%;
-      height: fit-content;
-      align-items: center;
-      height: 60%;
-    }
     
     .links-top {
       display: flex;
@@ -137,7 +130,7 @@
     .link-icon {
       display: flex;
       height: 100px;
-      width: 70px;
+      width: 90px;
       margin: 12px;
       flex-direction: column;
       justify-content: center;
@@ -152,9 +145,10 @@
     
     .img-section {
       display: flex;
+      width: 100%;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      width: 70%;
       height: 100%;
     }
     </style>

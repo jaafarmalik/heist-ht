@@ -23,7 +23,7 @@ a {
   text-decoration: none;
   color: #fff;
   text-shadow: chartreuse;
-  font-size: 1.2em;
+  font-size: 1em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -31,6 +31,6 @@ a {
 
 @font-face {
   font-family: 'MS Sans Serif', monospace;
-  src: url('./assets/font/ms_sans_serif_bold.woff');
+  src: url('/font/ms_sans_serif_bold.woff');
 }
 </style>
