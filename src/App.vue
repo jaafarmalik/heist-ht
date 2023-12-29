@@ -7,6 +7,7 @@ import Splash from './components/Splash.vue'
 </template>
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,6 @@ import Splash from './components/Splash.vue'
 html,
 body {
   height: 100vh;
-  font-family: 'MS Sans Serif';
   overflow: hidden;
 }
 
@@ -29,8 +29,4 @@ a {
   flex-direction: column;
 }
 
-@font-face {
-  font-family: 'MS Sans Serif', monospace;
-  src: url('/font/ms_sans_serif_bold.woff');
-}
 </style>
