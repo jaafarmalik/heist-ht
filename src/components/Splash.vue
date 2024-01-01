@@ -1,5 +1,6 @@
 <template>
   <div class="page-container">
+
     <!-- Top Links Section -->
     <div class="section-navlinks">
       <!-- Home -->
@@ -98,11 +99,6 @@ export default {
 </script>
     
 <style>
-@font-face {
-  font-family: W95;
-  src: url('/font/W95FA.otf');
-}
-
 /* Page Container */
 .page-container {
   height: 100svh;
@@ -114,41 +110,31 @@ export default {
 .section-navlinks {
   width: 100%;
   display: flex;
-  justify-content: start;
   height: 20%;
 }
 
 .navlink-wrapper {
   display: flex;
   justify-content: flex-start;
-  height: auto;
 }
 
 .navlink-wrapper a {
   -webkit-font-smoothing: none;
+  color: #f4f4f4;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
   font-family: W95;
   letter-spacing: 2.5px;
   font-size: 1em;
-  font-smooth: never;
+  height: fit-content;
 }
 
 .navlink-wrapper__icon {
   background-position: center;
   width: 125px;
   height: 65px;
-}
-
-/* Splash */
-.section-splash {
-  display: flex;
-  height: 60%;
-  justify-content: center;
-  max-width: 100%;
-}
-
-.section-splash img {
-  user-select: none;
-  align-self: center;
 }
 
 .navlink-wrapper,
@@ -203,6 +189,20 @@ export default {
 
 #shop-icon {
   background-image: url("/link-icon/store-48.png");
+}
+
+
+/* Splash */
+.section-splash {
+  display: flex;
+  height: 60%;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.section-splash img {
+  user-select: none;
+  align-self: center;
 }
 </style>
     
