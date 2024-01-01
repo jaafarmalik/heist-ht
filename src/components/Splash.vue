@@ -1,9 +1,7 @@
 <template>
   <div class="page-container">
-
     <!-- Top Links Section -->
     <div class="section-navlinks">
-
       <!-- Home -->
       <div class="navlink-wrapper">
         <a href="https://www.heist.ht">
@@ -11,7 +9,6 @@
           <p>Home</p>
         </a>
       </div>
-
       <!-- Contact -->
       <div class="navlink-wrapper">
         <a href="#" @click="changeImage('./splash/window_contact.png')">
@@ -19,7 +16,6 @@
           <p>Contact</p>
         </a>
       </div>
-
       <!-- Organization -->
       <div class="navlink-wrapper">
         <a a href="#" @click="changeImage('./splash/window_organization_noexp.png')">
@@ -27,15 +23,6 @@
           <p>Organization</p>
         </a>
       </div>
-
-      <!-- Archive -->
-      <div class="navlink-wrapper">
-        <a href="#" @click="changeImage('./splash/window_archive.png')">
-          <div class="navlink-wrapper__icon" id="archive-icon"></div>
-          <p>Archive</p>
-        </a>
-      </div>
-
       <!-- About -->
       <div class="navlink-wrapper">
         <a href="#" @click="changeImage('./splash/window_about.png')">
@@ -43,20 +30,24 @@
           <p>About</p>
         </a>
       </div>
+      <!-- Archive -->
+      <div class="navlink-wrapper">
+        <a href="#" @click="changeImage('./splash/window_archive.png')">
+          <div class="navlink-wrapper__icon" id="archive-icon"></div>
+          <p>Archive</p>
+        </a>
+      </div>
       <!-- End Links Section -->
     </div>
-
-
-
     <!-- Splash Image Section -->
     <div class="section-splash">
-      <img :src="imgUrl" />
+      <img :src="imgUrl" draggable="false" />
     </div>
-
-
     <!-- Bottom Links Section -->
     <div class="section-navlinks">
-
+      <div class="navlink-wrapper">
+        <div class="navlink-wrapper__icon" id=""></div>
+      </div>
       <!-- Discord -->
       <div class="navlink-wrapper">
         <a target="_blank" href="https://discord.gg/JR2mcktyCd">
@@ -64,7 +55,6 @@
           <p>Discord</p>
         </a>
       </div>
-
       <!-- Twitter -->
       <div class="navlink-wrapper">
         <a target="_blank" href="https://www.twitter.com/heistht">
@@ -72,7 +62,6 @@
           <p>Twitter</p>
         </a>
       </div>
-
       <!-- Instagram -->
       <div class="navlink-wrapper">
         <a target="_blank" href="https://www.instagram.com/heist">
@@ -80,7 +69,6 @@
           <p>Instagram</p>
         </a>
       </div>
-
       <!-- Shop -->
       <div class="navlink-wrapper">
         <a target="_blank" href="https://www.heist.net/">
@@ -88,7 +76,6 @@
           <p>Shop</p>
         </a>
       </div>
-
     </div>
     <!-- End Links Section -->
   </div>
@@ -111,6 +98,10 @@ export default {
 </script>
     
 <style>
+@font-face {
+  font-family: W95;
+  src: url('/font/W95FA.otf');
+}
 
 /* Page Container */
 .page-container {
@@ -133,42 +124,37 @@ export default {
   height: auto;
 }
 
-.navlink-wrapper img {
-  margin-bottom: 8px;
-}
-
 .navlink-wrapper a {
+  -webkit-font-smoothing: none;
+  font-family: W95;
+  letter-spacing: 2.5px;
+  font-size: 1em;
+  font-smooth: never;
 }
 
 .navlink-wrapper__icon {
-  border: solid 1px red;
-  width: 50%;
-  height: 50%;
+  background-position: center;
+  width: 125px;
+  height: 65px;
 }
 
 /* Splash */
 .section-splash {
-  display: none;
-  width: 100%;
+  display: flex;
   height: 60%;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
+  max-width: 100%;
 }
 
+.section-splash img {
+  user-select: none;
+  align-self: center;
+}
 
-/*
-====================== 
-Icon Images +To-Do
-======================
-
-Find better way to blocking user input of the elements within .navlink-wrapper (i.e saving,highlighting,dragging etc).
-The way I've done it here seems to be the most consistent across multiple devices/browsers.
-
-====================== */
-.navlink-wrapper, .navlink-wrapper__icon {
-  background-repeat: no-repeat;  
-  user-select:none;
+.navlink-wrapper,
+.navlink-wrapper__icon {
+  background-repeat: no-repeat;
+  user-select: none;
   /* pointer-events: none; */
 }
 
@@ -180,17 +166,21 @@ The way I've done it here seems to be the most consistent across multiple device
 /*  Top Link Icons  */
 /*  -------------- */
 #home-icon {
-  background-image: url("/link-icon/home-48.png");
+  background-image: url("/link-icon/home-light-48.png");
 }
+
 #contact-icon {
   background-image: url("/link-icon/contact-48.png");
 }
+
 #organization-icon {
   background-image: url("/link-icon/organization-48.png");
 }
+
 #archive-icon {
   background-image: url("/link-icon/archive-48.png");
 }
+
 #about-icon {
   background-image: url("/link-icon/about-48.png")
 }
@@ -200,17 +190,19 @@ The way I've done it here seems to be the most consistent across multiple device
 /*  Bottom Links Icons  */
 /*  ------------------ */
 #discord-icon {
-  background-image: url("/link-icon/discord-48.png");
+  background-image: url("/link-icon/discord-crop-bw-48.png");
 }
+
 #twitter-icon {
-  background-image: url("/link-icon/x_twitter-48.png");
+  background-image: url("/link-icon/twitter-crop-bw-48.png");
 }
+
 #instagram-icon {
   background-image: url("/link-icon/instagram-48.png");
 }
-#shop-icon {
-  background-image: url("/link-icon/shop-48.png");
-}
 
+#shop-icon {
+  background-image: url("/link-icon/store-48.png");
+}
 </style>
     
