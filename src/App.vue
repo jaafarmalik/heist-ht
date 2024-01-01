@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import Splash from './components/Splash.vue'
+// import Splash from './components/Splash.vue'
+import IconLink from './components/IconLink.vue'
+
 </script>
 
 <template>
-  <Splash></Splash>
+  <IconLink label="Home" IconPath="'link-icon/home-light-48.png'"></IconLink>
+  <!-- <Splash></Splash> -->
 </template>
 
 <style>
-
 * {
   margin: 0;
   padding: 0;
@@ -15,18 +17,8 @@ import Splash from './components/Splash.vue'
 
 html,
 body {
-  height: 100vh;
   overflow: hidden;
+  height: 100svh;
+  background: hsl(287, 94%, 7%);
 }
-
-a {
-  text-decoration: none;
-  color: #fff;
-  text-shadow: chartreuse;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 </style>
