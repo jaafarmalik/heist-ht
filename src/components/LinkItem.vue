@@ -2,9 +2,9 @@
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
-   Name: 'IconLink',
+   Name: 'LinkItem',
    props: {
-      label: {
+      LinkLabel: {
          type: String as PropType<string>,
          required: true,
       },
@@ -14,6 +14,7 @@ export default defineComponent({
       },
    }
 })
+
 </script>
 
 <template>
@@ -21,7 +22,7 @@ export default defineComponent({
       <a href="">
          <div :style="{ backgroundImage: 'url(' + IconPath + ')' }" class="navlink-wrapper__icon">
          </div>
-         <span class="navlink-wrapper__label">{{ label }}</span>
+         <span class="navlink-wrapper__label">{{ LinkLabel }}</span>
       </a>
    </div>
 </template>
@@ -29,40 +30,26 @@ export default defineComponent({
 <style scoped>
 @font-face {
    font-family: W95;
-   src: url('/font/W95FA.otf');
-}
-
-.navlink-wrapper {
-   display: flex;
-   justify-content: flex-start;
+   src: url('/font/Levi-Windows.ttf');
 }
 
 .navlink-wrapper a {
-   -webkit-font-smoothing: none;
-   color: #f4f4f4;
-   align-items: center;
-   text-decoration: none;
+   width: 110px;
    display: flex;
+   color: #f4f4f4;
    flex-direction: column;
+   align-items: center;
    font-family: W95;
-   letter-spacing: 2.5px;
    font-size: 1em;
-   height: fit-content;
+   text-decoration: none;
 }
 
 .navlink-wrapper__icon {
-   background-position: center;
-   width: 125px;
    height: 65px;
-}
-
-.navlink-wrapper,
-.navlink-wrapper__icon {
-   background-repeat: no-repeat;
+   width: 110px;
    user-select: none;
-}
-
-.navlink-wrapper__icon {
    pointer-events: none;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 </style>
