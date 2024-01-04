@@ -2,7 +2,7 @@
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
-   Name: 'LinkItem',
+   name: 'LinkItem',
    props: {
       LinkLabel: {
          type: String as PropType<string>,
@@ -12,14 +12,31 @@ export default defineComponent({
          type: String as PropType<string>,
          required: true,
       },
-   }
+      imgUrl: String,
+      redirectUrl: String,
+      changeSplash: Boolean,
+      inNewTab: Boolean,
+   },
+   methods: {
+      iconClicked() {
+         if (this.changeSplash) {
+            this.$emit('iconClicked', this.imgUrl)
+         } else if (this.redirectUrl) {
+            if (this.inNewTab) {
+               window.open(this.redirectUrl, '_blank');
+            } else {
+               window.location.href = this.redirectUrl;
+            }
+         }
+      },
+   },
 })
 
 </script>
 
 <template>
    <div class="navlink-wrapper">
-      <a href="">
+      <a href="#" @click="iconClicked" :target="linkTarget">
          <div :style="{ backgroundImage: 'url(' + IconPath + ')' }" class="navlink-wrapper__icon">
          </div>
          <span class="navlink-wrapper__label">{{ LinkLabel }}</span>
@@ -34,22 +51,26 @@ export default defineComponent({
 }
 
 .navlink-wrapper a {
-   width: 110px;
+   width: 65px;
    display: flex;
    color: #f4f4f4;
    flex-direction: column;
    align-items: center;
    font-family: W95;
-   font-size: 1em;
+   font-size: 12px;
    text-decoration: none;
+   margin: 4px;
 }
 
 .navlink-wrapper__icon {
-   height: 65px;
+   height: 48px;
    width: 110px;
-   user-select: none;
    pointer-events: none;
    background-repeat: no-repeat;
    background-position: center;
+}
+
+.navlink-wrapper__label {
+   margin-top: 0px;
 }
 </style>

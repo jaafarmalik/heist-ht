@@ -10,7 +10,6 @@ import Splash from './components/Splash.vue'
 </template>
 
 <style>
-
 * {
   margin: 0;
   padding: 0;
@@ -24,14 +23,10 @@ body {
 }
 
 .page-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   height: 100svh;
   background-color: #000;
-  padding: 32px 16px 32px 16px;
-}
-
-.section-navlinks {
-  width: 100%;
-  display: flex;
-  height: 20%;
 }
 </style>

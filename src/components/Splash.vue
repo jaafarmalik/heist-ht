@@ -1,31 +1,40 @@
 <template>
-  <div class="section-navlinks">
-    <LinkItem LinkLabel="Home" IconPath="'link-icon/home-light-48.png'">
+  <section class="section-navlinks">
+    <LinkItem LinkLabel="Home" IconPath="'icon-small/01-home.png'" :changeSplash="true" :imgUrl="Paint"
+      @iconClicked="showSplash">
     </LinkItem>
-    <LinkItem LinkLabel="Contact" IconPath="'link-icon/contact-48.png'">
+    <LinkItem LinkLabel="Contact" IconPath="'icon-small/02-contact.png'" :changeSplash="true" :imgUrl="Contact"
+      @iconClicked="showSplash">
     </LinkItem>
-    <LinkItem LinkLabel="Organization" IconPath="'link-icon/organization-48.png'">
+    <LinkItem LinkLabel="Organization" IconPath="'icon-small/03-organization.png'" :changeSplash="true" :imgUrl="Members"
+      @iconClicked="showSplash">
     </LinkItem>
-    <LinkItem LinkLabel="About" IconPath="'link-icon/about-48.png'">
+    <LinkItem LinkLabel="About" IconPath="'icon-small/04-about.png'" :changeSplash="true" :imgUrl="About"
+      @iconClicked="showSplash">
     </LinkItem>
-    <LinkItem LinkLabel="Archive" IconPath="'link-icon/archive-48.png'">
+    <LinkItem LinkLabel="Archive" IconPath="'icon-small/05-archive.png'" :changeSplash="true" :imgUrl="Archive"
+      @iconClicked="showSplash">
     </LinkItem>
-  </div>
+  </section>
 
-  <div class="section-splash">
+  <section class="section-splash">
     <img :src="imgUrl" />
-  </div>
+  </section>
 
-  <div class="section-navlinks">
-    <LinkItem LinkLabel="Discord" IconPath="'link-icon/discord-crop-bw-48.png'">
+  <section class="section-navlinks">
+    <LinkItem LinkLabel="Discord" IconPath="'icon-small/06-discord.png'" :inNewTab="true"
+      redirectUrl="https://www.discord.com">
     </LinkItem>
-    <LinkItem LinkLabel="Twitter" IconPath="'link-icon/twitter-48.png'">
+    <LinkItem LinkLabel="Twitter" IconPath="'icon-small/07-twitter.png'" :inNewTab="true"
+      redirectUrl="https://www.twitter.com/heistht/">
     </LinkItem>
-    <LinkItem LinkLabel="Instagram" IconPath="'link-icon/instagram-48.png'">
+    <LinkItem LinkLabel="Instagram" IconPath="'icon-small/08-insta.png'" :inNewTab="true"
+      redirectUrl="https://www.instagram.com/heist/">
     </LinkItem>
-    <LinkItem LinkLabel="Store" IconPath="'link-icon/store-48.png'">
+    <LinkItem LinkLabel="Store" IconPath="'icon-small/09-store.png'" :inNewTab="true"
+      redirectUrl="https://www.heist.net/">
     </LinkItem>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -35,14 +44,18 @@ export default {
   name: 'Splash',
   data() {
     return {
-      imgUrl: './splash/window_heist.png',
+      imgUrl: './splash/heist.png',
+      Paint: './splash/heist.png',
+      Contact: './splash/contact.png',
+      Members: './splash/org.png',
+      About: './splash/about.png',
+      Archive: './splash/archive.png',
     };
   },
   methods: {
-    changeImage(newUrl: string): void {
+    showSplash(newUrl: string): void {
       this.imgUrl = newUrl;
     },
-
   },
   components: {
     LinkItem,
@@ -53,22 +66,15 @@ export default {
 <style>
 /* Links Container */
 .section-navlinks {
-  width: 100%;
   display: flex;
-  height: 20%;
+  width: 100%;
+  padding: 15px 0 15px 0px;
 }
 
 /* Splash Image */
 .section-splash {
   display: flex;
-  height: 60%;
   justify-content: center;
-  max-width: 100%;
-}
-
-.section-splash img {
-  user-select: none;
-  align-self: center;
 }
 </style>
     
