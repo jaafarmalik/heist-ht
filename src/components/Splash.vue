@@ -1,155 +1,86 @@
 <template>
-  <div class="container">
-    <div class="desktop">
-      <div class="links-section">
-        <div class="links-top">
-          <div class="link-icon">
-            <a href="https://www.heist.ht">
-              <img class="desktop_icon" src="/icon/icon_home.png" alt="">
-              <p>Home</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a href="#" @click="changeImage('./splash/window_contact.png')">
-              <img class="desktop_icon" src="/icon/icon_contact.png" alt="">
-              <p>Contact</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a a href="#" @click="changeImage('./splash/window_organization.png')">
-              <img class="desktop_icon" src="/icon/icon_organization.png" alt="">
-              <p>Organization</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a href="#" @click="changeImage('./splash/window_archive.png')">
-              <img class="desktop_icon" src="/icon/icon_archive.png" alt="">
-              <p>Archive</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a href="#" @click="changeImage('./splash/window_about.png')">
-              <img class="desktop_icon" src="/icon/icon_about.png" alt="">
-              <p>About</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="img-section">
-        <img class="splash" :src="imgUrl" />
-      </div>
-      <div class="links-section">
-        <div class="links-bottom">
-          <div class="link-icon">
-            <a target="_blank" href="https://discord.gg/JR2mcktyCd">
-              <img class="desktop_icon" src="/icon/icon_discord.png" alt="">
-              <p>Discord</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a target="_blank" href="https://www.twitter.com/heistht">
-              <img class="desktop_icon" src="/icon/icon_twitter.png" alt="">
-              <p>Twitter</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a target="_blank" href="https://www.instagram.com/heist">
-              <img class="desktop_icon" src="/icon/icon_instagram.png" alt="">
-              <p>Instagram</p>
-            </a>
-          </div>
-          <div class="link-icon">
-            <a target="_blank" href="https://www.heist.net/">
-              <img class="desktop_icon" src="/icon/icon_shop.png" alt="">
-              <p>Shop</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <section class="section-navlinks">
+    <LinkItem LinkLabel="Home" IconPath="'link-icon/01-home.png'" :changeSplash="true" :imgUrl="Paint"
+      @iconClicked="showSplash">
+    </LinkItem>
+    <LinkItem LinkLabel="Contact" IconPath="'link-icon/02-contact.png'" :changeSplash="true" :imgUrl="Contact"
+      @iconClicked="showSplash">
+    </LinkItem>
+    <LinkItem LinkLabel="Organization" IconPath="'link-icon/03-organization.png'" :changeSplash="true" :imgUrl="Members"
+      @iconClicked="showSplash">
+    </LinkItem>
+    <LinkItem LinkLabel="About" IconPath="'link-icon/04-about.png'" :changeSplash="true" :imgUrl="About"
+      @iconClicked="showSplash">
+    </LinkItem>
+    <LinkItem LinkLabel="Archive" IconPath="'link-icon/05-archive.png'" :changeSplash="true" :imgUrl="Archive"
+      @iconClicked="showSplash">
+    </LinkItem>
+  </section>
+
+  <section class="section-splash">
+    <img :src="imgUrl" />
+  </section>
+
+  <section class="section-navlinks">
+    <LinkItem LinkLabel="Discord" IconPath="'link-icon/06-discord.png'" :inNewTab="true"
+      redirectUrl="https://www.discord.com">
+    </LinkItem>
+    <LinkItem LinkLabel="Twitter" IconPath="'link-icon/07-twitter.png'" :inNewTab="true"
+      redirectUrl="https://www.twitter.com/heistht/">
+    </LinkItem>
+    <LinkItem LinkLabel="Instagram" IconPath="'link-icon/08-insta.png'" :inNewTab="true"
+      redirectUrl="https://www.instagram.com/heist/">
+    </LinkItem>
+    <LinkItem LinkLabel="Store" IconPath="'link-icon/09-store.png'" :inNewTab="true" redirectUrl="https://www.heist.net/">
+    </LinkItem>
+  </section>
 </template>
-    
+
 <script lang="ts">
+import LinkItem from './LinkItem.vue'
 
 export default {
   name: 'Splash',
   data() {
     return {
-      imgUrl: './splash/window_heist.png',
+      imgUrl: './splash/heist.png',
+      Paint: './splash/heist.png',
+      Contact: './splash/contact.png',
+      Members: './splash/org.png',
+      About: './splash/about.png',
+      Archive: './splash/archive.png',
     };
   },
   methods: {
-    changeImage(newUrl: string): void {
+    showSplash(newUrl: string): void {
       this.imgUrl = newUrl;
     },
   },
+  components: {
+    LinkItem,
+  }
 };
-
 </script>
-    
+
 <style>
-.container {
-  display: block;
-  height: 100vh;
-  background-color: #000;
-}
-
-.desktop {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.desktop_icon {
-  margin-bottom: 10px;
-}
-
-
-.links-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.2em;
-}
-
-
-.links-top {
-  display: flex;
-  flex-direction: row;
-}
-
-.links-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: end;
-}
-
-.link-icon {
-  display: flex;
-  height: 100px;
-  width: 90px;
-  margin: 12px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  letter-spacing: 0px;
-}
-
-.splash {
-  position: absolute;
-}
-
-.img-section {
+/* Links Container */
+.section-navlinks {
   display: flex;
   width: 100%;
-  align-items: center;
-  flex-direction: column;
+  padding: 15px 0 15px 0px;
+}
+
+/* Splash Image */
+.section-splash {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  height: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+  .section-splash img {
+    width: 99%;
+  }
 }
 </style>
     

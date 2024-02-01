@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import Splash from './components/Splash.vue'
+
 </script>
 
 <template>
-  <Splash></Splash>
+  <div class="page-container">
+    <Splash></Splash>
+  </div>
 </template>
 
 <style>
@@ -14,23 +17,16 @@ import Splash from './components/Splash.vue'
 
 html,
 body {
-  height: 100vh;
-  font-family: 'MS Sans Serif';
   overflow: hidden;
+  height: 100svh;
+  background: hsl(287, 94%, 7%);
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-  text-shadow: chartreuse;
-  font-size: 1em;
+.page-container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-}
-
-@font-face {
-  font-family: 'MS Sans Serif', monospace;
-  src: url('/font/ms_sans_serif_bold.woff');
+  height: 100svh;
+  background-color: #000;
 }
 </style>
