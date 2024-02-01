@@ -73,4 +73,10 @@ export default defineComponent({
 .navlink-wrapper__label {
    margin-top: 0px;
 }
+
+@media only screen and (max-width: 500px) {
+   .navlink-wrapper a {
+      margin: -2px;
+   }
+}
 </style>

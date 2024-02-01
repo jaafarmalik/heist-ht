@@ -86,7 +86,6 @@ export default {
 @media only screen and (max-width: 400px) {
   .section-splash img {
     width: 99%;
-
   }
 }
 </style>
