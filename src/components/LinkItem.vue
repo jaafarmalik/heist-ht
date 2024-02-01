@@ -36,7 +36,7 @@ export default defineComponent({
 
 <template>
    <div class="navlink-wrapper">
-      <a href="#" @click="iconClicked" :target="linkTarget">
+      <a href="#" @click="iconClicked">
          <div :style="{ backgroundImage: 'url(' + IconPath + ')' }" class="navlink-wrapper__icon">
          </div>
          <span class="navlink-wrapper__label">{{ LinkLabel }}</span>

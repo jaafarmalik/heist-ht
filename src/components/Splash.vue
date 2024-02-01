@@ -77,9 +77,16 @@ export default {
   justify-content: center;
 }
 
+.section-splash img {
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+}
+
 @media only screen and (max-width: 400px) {
   .section-splash img {
     width: 99%;
+
   }
 }
 </style>
